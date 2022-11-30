@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.techlab_mobileproject.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/menuLong"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.techlab_mobileproject.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/menuMat"
+            app:destination="@id/matemFragment" />
+        <action
+            android:id="@+id/menuEsp"
+            app:destination="@id/espanolFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/espanolFragment"
+        android:name="com.example.techlab_mobileproject.EspanolFragment"
+        android:label="fragment_espanol"
+        tools:layout="@layout/fragment_espanol" >
+        <action
+            android:id="@+id/action_espanolFragment_to_vocalesFragment"
+            app:destination="@id/vocalesFragment" />
+        <action
+            android:id="@+id/action_espanolFragment_to_vocalesFragment2"
+            app:destination="@id/vocalesFragment" />
+        <action
+            android:id="@+id/action_espanolFragment_to_abecedarioFragment"
+            app:destination="@id/abecedarioFragment" />
+        <action
+            android:id="@+id/action_espanolFragment_to_oracionInFragment"
+            app:destination="@id/oracionInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matemFragment"
+        android:name="com.example.techlab_mobileproject.MatemFragment"
+        android:label="fragment_matem"
+        tools:layout="@layout/fragment_matem" >
+        <action
+            android:id="@+id/activityContarFracmen"
+            app:destination="@id/activityContarFragment" />
+        <action
+            android:id="@+id/action_matemFragment_to_sumaFragment3"
+            app:destination="@id/sumaFragment" />
+        <action
+            android:id="@+id/action_matemFragment_to_restaFragment"
+            app:destination="@id/restaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityContarFragment"
+        android:name="com.example.techlab_mobileproject.ActivityContarFragment"
+        android:label="fragment_activity_contar"
+        tools:layout="@layout/fragment_activity_contar" >
+        <action
+            android:id="@+id/conNumero"
+            app:destination="@id/comceptoNumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comceptoNumFragment"
+        android:name="com.example.techlab_mobileproject.comceptoNumFragment"
+        android:label="fragment_comcepto_num"
+        tools:layout="@layout/fragment_comcepto_num" />
+    <fragment
+        android:id="@+id/sumaFragment"
+        android:name="com.example.techlab_mobileproject.SumaFragment"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" >
+        <action
+            android:id="@+id/action_sumaFragment_to_activitySumaFragment"
+            app:destination="@id/activitySumaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activitySumaFragment"
+        android:name="com.example.techlab_mobileproject.activitySumaFragment"
+        android:label="fragment_activity_suma"
+        tools:layout="@layout/fragment_activity_suma" />
+    <fragment
+        android:id="@+id/restaFragment"
+        android:name="com.example.techlab_mobileproject.RestaFragment"
+        android:label="fragment_resta"
+        tools:layout="@layout/fragment_resta" >
+        <action
+            android:id="@+id/activityrestaFracmen"
+            app:destination="@id/activityRestaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityRestaFragment"
+        android:name="com.example.techlab_mobileproject.ActivityRestaFragment"
+        android:label="fragment_activity_resta"
+        tools:layout="@layout/fragment_activity_resta" />
+    <fragment
+        android:id="@+id/vocalesFragment"
+        android:name="com.example.techlab_mobileproject.vocalesFragment"
+        android:label="fragment_vocales"
+        tools:layout="@layout/fragment_vocales" >
+        <action
+            android:id="@+id/action_vocalesFragment_to_activityVocalFragment"
+            app:destination="@id/activityVocalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityVocalFragment"
+        android:name="com.example.techlab_mobileproject.ActivityVocalFragment"
+        android:label="fragment_activity_vocal"
+        tools:layout="@layout/fragment_activity_vocal" />
+    <fragment
+        android:id="@+id/abecedarioFragment"
+        android:name="com.example.techlab_mobileproject.AbecedarioFragment"
+        android:label="fragment_abecedario"
+        tools:layout="@layout/fragment_abecedario" >
+        <action
+            android:id="@+id/action_abecedarioFragment_to_activityAbeceFragment"
+            app:destination="@id/activityAbeceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityAbeceFragment"
+        android:name="com.example.techlab_mobileproject.ActivityAbeceFragment"
+        android:label="fragment_activity_abece"
+        tools:layout="@layout/fragment_activity_abece" />
+    <fragment
+        android:id="@+id/oracionesFragment"
+        android:name="com.example.techlab_mobileproject.OracionesFragment"
+        android:label="fragment_oraciones"
+        tools:layout="@layout/fragment_oraciones" />
+    <fragment
+        android:id="@+id/oracionInFragment"
+        android:name="com.example.techlab_mobileproject.OracionInFragment"
+        android:label="fragment_oracion_in"
+        tools:layout="@layout/fragment_oracion_in" >
+        <action
+            android:id="@+id/action_oracionInFragment_to_oracionesFragment"
+            app:destination="@id/oracionesFragment" />
+    </fragment>
+</navigation>
